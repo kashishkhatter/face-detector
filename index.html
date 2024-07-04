@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Face Detection</title>
+    <script defer src="face-api.min.js"></script> <!--face detection api script(load before the script)-->
+    <script defer src="script.js"></script> <!--defer to improve page load time-->
+    <style>
+        /* Center the container in the middle of the viewport */
+        body {
+            background-image: url('https://cdn.dribbble.com/users/307908/screenshots/4449308/big.gif');
+            margin: 0;
+            padding: 0;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden; /* Ensure no scrollbars appear */
+        }
+
+        /* Container for the video and canvas */
+        #video-container {
+            position: relative;
+            width: 720px; /* Match the video width */
+            height: 560px; /* Match the video height */
+        }
+
+        /* Position the video and canvas on top of each other */
+        video, canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="video-container">
+        <video id="video" width="720" height="560" autoplay muted></video>
+    </div>
+</body>
+</html>
